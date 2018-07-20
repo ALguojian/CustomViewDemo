@@ -5,7 +5,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.alguojian.customviewdemo.layoutprams.WallLayoutParams;
 
 /**
  * 自定义横向瀑布流，实现单选和多选
@@ -26,7 +25,6 @@ public class TestViewGroup extends ViewGroup {
     public TestViewGroup(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-
     }
 
     /**
@@ -38,7 +36,6 @@ public class TestViewGroup extends ViewGroup {
      */
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-
 
         int lineWidth = 0;
         int lineHeight = 0;
@@ -83,18 +80,19 @@ public class TestViewGroup extends ViewGroup {
 
     @Override
     public LayoutParams generateLayoutParams(AttributeSet attrs) {
-        return new WallLayoutParams(getContext(), attrs);
+        return new MarginLayoutParams(getContext(), attrs);
     }
 
     @Override
     protected LayoutParams generateLayoutParams(LayoutParams p) {
-        return new WallLayoutParams(p);
+        return new MarginLayoutParams(p);
     }
 
     @Override
     protected LayoutParams generateDefaultLayoutParams() {
-        return new WallLayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+        return new MarginLayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
     }
+
 
     /**
      * 测量子view
@@ -180,7 +178,6 @@ public class TestViewGroup extends ViewGroup {
         setMeasuredDimension(widthMode == MeasureSpec.EXACTLY ? width : allWidth, heightMode == MeasureSpec.EXACTLY ? height : allHeight);
 
     }
-
     /**
      * 设置点击事件
      *
@@ -190,16 +187,14 @@ public class TestViewGroup extends ViewGroup {
         for (int i = 0; i < getChildCount(); i++) {
             final int index = i;
             View childAt = getChildAt(i);
-
-            childAt.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    listener.onItemClick(index);
-                }
-            });
+//            childAt.setOnClickListener(new OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    listener.onItemClick(index);
+//                }
+//            });
         }
     }
-
 
     public interface OnItemClickListener {
         void onItemClick(int position);

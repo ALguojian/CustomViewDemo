@@ -1,4 +1,4 @@
-package com.alguojian.customviewdemo;
+package com.alguojian.customviewdemo.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -18,6 +18,8 @@ import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+
+import com.alguojian.customviewdemo.R;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,4 +1,4 @@
-package com.alguojian.customviewdemo;
+package com.alguojian.customviewdemo.activity;
 
 import android.animation.ObjectAnimator;
 import android.animation.TimeInterpolator;
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
+
+import com.alguojian.customviewdemo.R;
 
 public class Main2Activity extends AppCompatActivity {
 

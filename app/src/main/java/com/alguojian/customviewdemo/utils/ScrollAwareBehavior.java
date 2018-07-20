@@ -1,4 +1,4 @@
-package com.alguojian.customviewdemo;
+package com.alguojian.customviewdemo.utils;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

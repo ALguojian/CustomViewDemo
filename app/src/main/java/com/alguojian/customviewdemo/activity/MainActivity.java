@@ -1,4 +1,4 @@
-package com.alguojian.customviewdemo;
+package com.alguojian.customviewdemo.activity;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -15,6 +15,8 @@ import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
+
+import com.alguojian.customviewdemo.R;
 
 public class MainActivity extends AppCompatActivity {
 
